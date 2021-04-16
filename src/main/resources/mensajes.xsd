@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://espiritu.me/mensajes" 
+    xmlns:tns="http://espiritu.me" elementFormDefault="qualified">
+
+    <element name="SaludarRequest">
+        <complexType>
+            <sequence>
+                <element name="nombre" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+    <element name="SaludarResponse">
+        <complexType>
+            <sequence>
+                <element name="respuesta" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+
+    
+    <element name="BuscarSaludosRequest">
+        <complexType/>
+    </element>
+    <element name="BuscarSaludosResponse">
+        <complexType>
+            <sequence>
+                <element name="saludador" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="id" type="int"></element>
+                            <element name="nombre" type="string"></element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+
+
+
+    <element name="ModificarSaludoRequest">
+        <complexType>
+                <sequence>
+                    <element name="id" type="int"></element>
+                    <element name="nombre" type="string"></element>
+                </sequence>
+        </complexType>
+    </element>
+    <element name="ModificarSaludoResponse">
+        <complexType>
+            <sequence>
+                <element name="respuesta" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+
+
+
+    <element name="BorrarSaludoRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"></element>
+                
+            </sequence>
+        </complexType>
+    </element>
+    <element name="BorrarSaludoResponse">
+        <complexType>
+            <sequence>
+                <element name="respuesta" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+
+
+
+
+    <element name="BuscarSaludoNombreRequest">
+        <complexType>
+            <sequence>
+                <element name="nombre" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+    
+    <element name="BuscarSaludoNombreResponse">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"></element>
+                <element name="nombre" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>
